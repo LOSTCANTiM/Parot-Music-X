@@ -31,6 +31,20 @@ body
   font-size: 15px;
 }
 
+.slider
+{
+  width: 70%;
+}
+.slider::-webkit-slider-runnable-track {
+  background-color: #363636;
+  border-radius: 8px;
+  height: 5px;
+}
+.slider::-webkit-slider-thumb
+{
+  margin-top: -5px;
+}
+
 .player button
 {
   width: 70px;
@@ -68,6 +82,30 @@ hr
   display: flex;
   flex-direction: column;
 }
+
+#sList input
+{
+  width: 100%;
+  border: none;
+  background-color: #363636;
+  padding: 20px;
+  color: #FF9B29;
+  border: 1px dashed #363636;
+  font-family: DM Sans;
+  outline: none;
+}
+#sList input:hover, #sList input:focus
+{
+  background: #FF9B29;
+  border: 1px solid transparent;
+  color: black;
+}
+#sList div button
+{
+  width: 140px;
+  border: 1px solid transparent;
+}
+
 #sList button
 {
   width: 100%;  
@@ -79,7 +117,7 @@ hr
 }
 #sList button:hover
 {
-  background: linear-gradient(-45deg, #FF9B29, #FF3B29);
+  background-color: #FF9B29;
   color: #141414;
 }
 
