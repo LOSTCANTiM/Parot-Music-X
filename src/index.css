@@ -1,0 +1,93 @@
+body
+{
+  background-color: #141414;
+  color: whitesmoke;
+  margin: 0%;
+  padding: 0%;
+}
+
+.player
+{
+  width: 100%;
+  position: sticky;
+  top: 0%;
+  background-color: #141414d2;
+}
+
+.player div
+{
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player div.bottom
+{
+  display: flex;
+  flex-direction: column;
+  font-family: DM Sans;
+  color: rgb(211, 211, 211);
+  font-size: 15px;
+}
+
+.player button
+{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 1%;
+  margin-top: 5%;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background: linear-gradient(-45deg, #FF9B29, #FF3B29);
+  transition: 200ms;
+  opacity: 0.95;
+}
+.player button.play
+{
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+}
+.player button:hover
+{
+  opacity: 1;
+}
+
+hr
+{
+  border: 1px solid #FF9B29;
+  opacity: 0.1;
+}
+
+#sList
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#sList button
+{
+  width: 100%;  
+  padding: 10px;
+  border: none;
+  background-color: #363636;
+  color: rgb(211, 211, 211);
+  font-family: DM Sans;
+}
+#sList button:hover
+{
+  background: linear-gradient(-45deg, #FF9B29, #FF3B29);
+  color: #141414;
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+  background: linear-gradient(-45deg, #FF9B29, #FF3B29);
+}
