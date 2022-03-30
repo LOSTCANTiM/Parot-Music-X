@@ -34,6 +34,7 @@ body
 .slider
 {
   width: 70%;
+  background: #FF9B29;
 }
 .slider::-webkit-slider-runnable-track {
   background-color: #363636;
@@ -70,10 +71,42 @@ body
   opacity: 1;
 }
 
+#sName {text-align: center;}
+
 hr
 {
   border: 1px solid #FF9B29;
   opacity: 0.1;
+}
+
+.controls input
+{
+  width: 100%;
+  border: none;
+  background-color: #363636;
+  padding: 20px;
+  color: #FF9B29;
+  border: 1px dashed #363636;
+  font-family: DM Sans;
+  outline: none;
+}
+.controls input:hover, .controls input:focus
+{
+  background: #FF9B29;
+  border: 1px solid transparent;
+  color: black;
+}
+.controls button
+{
+  width: 140px;
+  border: none;
+  background-color: #363636;
+  color: whitesmoke;
+}
+.controls button:hover
+{
+  background-color: #FF9B29;
+  color: #141414;
 }
 
 #sList
@@ -117,7 +150,7 @@ hr
 }
 #sList button:hover
 {
-  background-color: #FF9B29;
+  background: linear-gradient(-45deg, #FF9B29, #FF3B29);
   color: #141414;
 }
 

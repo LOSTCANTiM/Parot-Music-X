@@ -89,3 +89,4 @@ typings/
 out/
 
 src/audios
+test.json
