@@ -139,6 +139,12 @@ hr
   border: 1px solid transparent;
 }
 
+#playingRn
+{
+  background: linear-gradient(-45deg, #FF9B29, #FF3B29);
+  color: #141414;
+}
+
 #sList button
 {
   width: 100%;  

@@ -17,7 +17,7 @@ function loadSongs() {
     for (let index = 0; index < dir.length; index++) {
         var element = document.createElement('button');
         element.innerHTML = getName(dir[index]);
-        element.setAttribute('onclick', 'playSong("'+dir[index]+'")')
+        element.setAttribute('onclick', 'playSong("'+dir[index]+'", this)')
         sList.appendChild(element);
     }
 }
@@ -33,7 +33,10 @@ function toTime(cnv) {
     return returned;
 }
 
-function playSong(songSrc) {
+function playSong(songSrc, element) {
+    var e = document.getElementById('playingRn');
+    if (e != null){e.removeAttribute('id');}
+    element.setAttribute('id', 'playingRn');
     audio.src = 'audios/'+songSrc;
     document.getElementById('sName').innerHTML = getName(songSrc);
     audio.pause();
