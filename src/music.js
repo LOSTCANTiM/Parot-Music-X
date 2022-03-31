@@ -51,7 +51,7 @@ function loop() {
             audio.currentTime = 0;
         }
     }
-    else if (!audio.loop) {
+    else {
         audio.loop = true;
         document.getElementById('loop').style.background = '#2C8FFF';
     }
@@ -65,8 +65,17 @@ function downloadSong() {
     });
 }
 
-function shuffle() {
+var shuffled = false;
 
+function shuffle() {
+    if (!shuffled) {
+        document.getElementById('shuffle').style.background = '#2C8FFF';
+        shuffled = true;
+    }
+    else {
+        document.getElementById('shuffle').style.background = '';
+        shuffled = false;
+    }
 }
 
 function reloadSongs() {
@@ -104,5 +113,18 @@ window.onload = () => {
         slider.setAttribute('max', parseInt(audio.duration));
         slider.value = parseInt(audio.currentTime);
         document.getElementById('sDur').innerHTML = toTime(audio.currentTime)+' / '+toTime(audio.duration);
+
+        if (audio.currentTime == audio.duration) {
+            if (shuffled) {
+                var dir = fs.readdirSync('src/audios');
+            const rndInt = Math.floor(Math.random() * dir.length);
+            document.getElementById('sName').innerHTML = getName(dir[rndInt]);
+            var e = document.getElementById('playingRn');
+            if (e != null){e.removeAttribute('id');}
+            audio.src = 'audios/'+dir[rndInt];
+            audio.currentTime = 0;
+            audio.play();
+            }
+        }
     }
 }

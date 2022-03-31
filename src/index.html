@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="player">
-      <div><button>
+      <div><button onclick="shuffle()" id="shuffle">
         <i class="fa-solid fa-shuffle"></i>
       </button>
 
@@ -39,6 +39,11 @@
       <button onclick="reloadSongs()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
     </div>
     <div id="sList">
+    </div>
+
+    <div class="statusBar">
+      <p><i class="fa-solid fa-circle-chevron-right"></i></p>
+      <p id="status"></p>
     </div>
   </body>
 </html>
