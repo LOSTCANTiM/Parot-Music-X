@@ -3,6 +3,10 @@ const fs = require('fs');
 
 var audio = new Audio();
 
+console.log = function (message) {
+    document.getElementById('status').innerHTML = message.toString();
+}
+
 function getName(pName) {
     var name = pName.toString().replace('.mp3', '');
     name = name.replace('.webm', '');

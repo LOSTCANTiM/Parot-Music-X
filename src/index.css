@@ -114,6 +114,7 @@ hr
   width: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 300px;
 }
 
 #sList input
@@ -166,11 +167,27 @@ hr
 }
 ::-webkit-scrollbar-thumb
 {
-  background: linear-gradient(-45deg, #FF9B29, #FF3B29);
+  background: #989898;
 }
 
 .player button.active
 {
   background-color: #44d3ff;
   color: #141414;
+}
+
+.statusBar
+{
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0%;
+  background-color: #FF9B29;
+}
+.statusBar p
+{
+  font-family: Indie Flower;
+  font-size: 10px;
+  color: #141414;
+  padding: 5px;
 }
