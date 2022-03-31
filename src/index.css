@@ -168,3 +168,9 @@ hr
 {
   background: linear-gradient(-45deg, #FF9B29, #FF3B29);
 }
+
+.player button.active
+{
+  background-color: #44d3ff;
+  color: #141414;
+}

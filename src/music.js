@@ -43,12 +43,30 @@ function playSong(songSrc, element) {
     play();
 }
 
+function loop() {
+    if (audio.loop) {
+        document.getElementById('loop').style.background = '';
+        audio.loop = false;
+        if (audio.currentTime == audio.duration) {
+            audio.currentTime = 0;
+        }
+    }
+    else if (!audio.loop) {
+        audio.loop = true;
+        document.getElementById('loop').style.background = '#2C8FFF';
+    }
+}
+
 function downloadSong() {
     var songLink = document.getElementById('sLink').value;
     const pyProcess = child_process.spawn('python', ['src/music.py', songLink]);
     pyProcess.stdout.on('data', (data) => {
         console.log(data.toString());
     });
+}
+
+function shuffle() {
+
 }
 
 function reloadSongs() {

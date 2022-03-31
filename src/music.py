@@ -13,7 +13,7 @@ def getSong(link):
         ydl.extract_info(link, download=True)
         info = ydl.extract_info(link, download=False)
 
-    print('finished downloading')
+    print('processing..')
     files = os.listdir(os.getcwd())
     for file in files:
         if '.mp3' in file:
@@ -28,6 +28,7 @@ def getSong(link):
         if '.wav' in file:
             os.rename(file, f"{info['title']}.wav")
             shutil.move(f"{os.getcwd()}\\{info['title']}.wav", f"{os.getcwd()}\\src\\audios")
+    print('finished downloading')
 
 
 if sys.argv[1] == 'cpj':
