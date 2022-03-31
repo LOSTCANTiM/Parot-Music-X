@@ -24,6 +24,8 @@ function loadSongs() {
         element.setAttribute('onclick', 'playSong("'+dir[index]+'", this)')
         sList.appendChild(element);
     }
+    sList.style.height = sList.clientHeight+200+'px';
+    console.log(sList.clientHeight);
 }
 
 function toTime(cnv) {
