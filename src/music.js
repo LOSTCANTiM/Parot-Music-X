@@ -16,7 +16,7 @@ function getName(pName) {
 }
 
 function loadSongs() {
-    var dir = fs.readdirSync('src/audios');
+    var dir = fs.readdirSync('resources/app/src/audios');
     var sList = document.getElementById('sList');
     for (let index = 0; index < dir.length; index++) {
         var element = document.createElement('button');
@@ -25,7 +25,6 @@ function loadSongs() {
         sList.appendChild(element);
     }
     sList.style.height = sList.clientHeight+200+'px';
-    console.log(sList.clientHeight);
 }
 
 function toTime(cnv) {
@@ -65,7 +64,7 @@ function loop() {
 
 function downloadSong() {
     var songLink = document.getElementById('sLink').value;
-    const pyProcess = child_process.spawn('python', ['src/music.py', songLink]);
+    const pyProcess = child_process.spawn('python', ['resources/app/src/music.py', songLink]);
     pyProcess.stdout.on('data', (data) => {
         console.log(data.toString());
     });
@@ -122,7 +121,7 @@ window.onload = () => {
 
         if (audio.currentTime == audio.duration) {
             if (shuffled) {
-                var dir = fs.readdirSync('src/audios');
+                var dir = fs.readdirSync('resources/app/src/audios');
             const rndInt = Math.floor(Math.random() * dir.length);
             document.getElementById('sName').innerHTML = getName(dir[rndInt]);
             var e = document.getElementById('playingRn');

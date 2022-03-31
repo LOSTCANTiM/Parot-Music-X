@@ -18,16 +18,16 @@ def getSong(link):
     for file in files:
         if '.mp3' in file:
             os.rename(file, f"{info['title']}.mp3")
-            shutil.move(f"{os.getcwd()}\\{info['title']}.mp3", f"{os.getcwd()}\\src\\audios")
+            shutil.move(f"{os.getcwd()}\\{info['title']}.mp3", f"{os.getcwd()}resources\\app\\src\\audios")
         if '.m4a' in file:
             os.rename(file, f"{info['title']}.m4a")
-            shutil.move(f"{os.getcwd()}\\{info['title']}.m4a", f"{os.getcwd()}\\src\\audios")
+            shutil.move(f"{os.getcwd()}\\{info['title']}.m4a", f"{os.getcwd()}resources\\app\\src\\audios")
         if '.webm' in file:
             os.rename(file, f"{info['title']}.webm")
-            shutil.move(f"{os.getcwd()}\\{info['title']}.webm", f"{os.getcwd()}\\src\\audios")
+            shutil.move(f"{os.getcwd()}\\{info['title']}.webm", f"{os.getcwd()}resources\\app\\src\\audios")
         if '.wav' in file:
             os.rename(file, f"{info['title']}.wav")
-            shutil.move(f"{os.getcwd()}\\{info['title']}.wav", f"{os.getcwd()}\\src\\audios")
+            shutil.move(f"{os.getcwd()}\\{info['title']}.wav", f"{os.getcwd()}resources\\app\\src\\audios")
     print('finished downloading')
 
 
